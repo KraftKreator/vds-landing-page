@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./imgages/icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="main.css">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="https://esm.run/@material/web/all"></script>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLQBENDFCN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QLQBENDFCN');
+</script>
+<body>
+    
+
+        
+<div class="wrapper">   
+    <header>
+        <img src="./images/vds-logo.png">
+           <div class="burger"> 
+                <span></span>
+                <span></span>   
+                <span></span>
+           </div>
+
+        <nav class="menu-wrapper">
+            <md-outlined-button class="menu" href="./basket.html" target="_blank">+ card </md-outlined-button>
+            <md-outlined-button class="menu" href="https://www.figma.com/proto/M2K4QJUr4RHqS6JPrL7QHi/portfo-White-Black?node-id=1-1099&p=f&t=Wvn5u8vs64ZRTtdG-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A358" target="_blank"> pre orders </md-outlined-button>
+        </nav>
+    </header>
+
+
+            
+    <div class="title">
+            <h3>  Ultimate Black Hoodie </h3>  
+        
+            
+        <section id="access">
+            <section id="client-info">
+            <md-outlined-button class="menu" href="./basket.html" target="_blank"> + card  </md-outlined-button>
+            </section>    
+        </section>
+        </div>
+    <div id="description&pics">    
+        <section id="prototype">
+                <div class="description-container">
+                    <h1>Ultimate Black Hoodie</h1>
+                    <h3>book your order</h3><h3>450 PLN</h3>
+                    <p>▼ The Ultimate Black Hoodie: Premium Design with Ribbed Cuffs and Oversized Hood - High-End Fashion
+                    <br>// Simple but well re-think form of a classic hoodie trimmed with high-end industry standards.
+                    <br>// Introducing premium reimagined classic hoodie – a perfect blend of simplicity and high-end fashion. This expertly crafted hoodie features ribbed cuffs and a well-designed hood with an ergonomic shape and oversized appeal.
+                    The ribbed cuffs are carefully constructed to provide a snug fit around your wrists, offering a subtle yet fashionable look.
+                    <br>// The attention to detail in every stitch and seam speaks to our commitment to delivering a product that surpasses industry standards.
+                    </p>
+    
+
+        <div class="available-sizes">
+                    
+                    <h1>available sizes / uni_S E X </h1>
+            
+                    <md-outlined-button class="menu" href="./basket.html" target="_blank"> + card  </md-outlined-button>
+            <a href="./basket.html"  class="size-btn" data-size="S"> 
+            <section id="access">purchase:
+              |Size S</a>
+            <section id="client-info">
+            
+            </section>    
+            </section>
+
+            <a href="./basket.html" class="size-btn" data-size="M">
+            <section id="access">
+            <section id="client-info">
+            <md-outlined-button class="menu" href="./basket.html" target="_blank"> + card  </md-outlined-button> 
+            </section>
+            </section>+ Size M</a>
+
+            <a href="./basket.html" class="size-btn" data-size="L"> 
+            <section id="access">
+            <section id="client-info">
+            <md-outlined-button class="menu" href="./basket.html" target="_blank"> + card  </md-outlined-button>   
+            </section>    
+            </section>+ Size L</a>
+            
+        </div>
+        </div>
+
+                <script src="js/cart.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.size-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const size = btn.dataset.size;
+          // przykładowy produkt, dopasuj id/name/price/img
+          const item = {
+            id: 'ultimate-black-hoodie',
+            name: 'Ultimate Black Hoodie',
+            size: size,
+            price: 900,
+            qty: 1,
+            img: 'https://placekitten.com/112/112'
+          };
+          // używamy API z cart.js
+          window.LGJCart.addItem(item);
+          // przekieruj do koszyka
+          window.location.href = 'basket.html';
+        });
+      });
+    });
+  </script>
+
+         <div class="picture-container">
+                    <img src="./images/ultimate-hoodie.jpg" data-hover="./images/VDS_ensemble_kangoor_hoodie_front.jpg">
+                    
+                    <h3>book your order</h3>
+                    <md-outlined-button>size S</md-outlined-button>   
+                </div>
+
+    </div>
+<section class="purchase-list-conatiner">
+                    <div class="purchase-list">
+<md-list style="max-width: 300px;">
+  <md-list-item data-size="S" class="size-item">
+    hoodie size S
+    <img slot="start" style="width: 56px" src="https://placekitten.com/112/112">
+  </md-list-item>
+  <md-divider></md-divider>
+  <md-list-item data-size="M" class="size-item">
+    hoodie size M
+    <img slot="start" style="width: 56px" src="https://placekitten.com/114/114">
+  </md-list-item>
+  <md-divider></md-divider>
+  <md-list-item data-size="L" class="size-item">
+    hoodie size L
+    <img slot="start" style="width: 56px" src="https://placekitten.com/116/116">
+  </md-list-item>
+</md-list>
+
+                    </div>
+
+                </section>
+<div class="basket-container">
+                    <h3>Order Basket</h3>
+                    <div class="order-list">
+                        <div class="order-item">
+                            <span class="item-name">Ultimate Black Hoodie – Size S</span>
+                            <span class="item-price"></span>
+                        </div>
+      
+                    </div>
+                    <div class="order-total">
+                        <span class="total-label">Total:</span>
+                        <span class="total-price">450 PLN</span>
+                    </div>
+</div>
+               
+                
+
+                
+                    </div>
+                </div>
+        </section>
+
+
+
+
+
+<button class="collapsible">Composition</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Care labells</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">about the brand</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Size advisor</button>
+
+    <div class="content">
+        <div class="s-advisor">
+            <h2>Size Advisor : place chest measure</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="number" name="quantity" placeholder="Enter quantity" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="result">Size advisor would suggest:</div>
+        </div>
+    </div>
+
+</section>
+        </section> 
+
+<section id="credits"> 
+    <h1>credits</h1>
+    <hr>
+    <p>about size advisor</p>
+    <p>save delivery</p>
+    <p>how long</p>
+    <p>FAQ</p>
+    <p>about unique orders</p>
+    <p>terms & conditions</p>
+    <p>service</p>
+    </section>
+
+        
+    
+<footer>
+        <p>ⓡ 2026 design powered by Visual Design Studio | S_JΛ</p>
+</footer> 
+<script src="script.js"></script>
+</body>
+</html>
+
