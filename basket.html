@@ -41,24 +41,41 @@
             <h3>  Ultimate Black Hoodie </h3>  
 <div class="basket-container">
                     <h3>Order Basket</h3>
-                    <div class="order-list">
-                        <div class="order-item">
-                            <span class="item-name">Ultimate Black Hoodie – Size S</span>
-                            <span class="item-price"></span>
-                        </div>
-      
-                    </div>
+                    <div class="order-list"></div>
                     <div class="order-total">
                         <span class="total-label">Total:</span>
-                        <span class="total-price">550 PLN</span>
+                        <span class="total-price"></span>
                     </div>
 </div>
+<script type="module">
+  import { Cart } from "./cart.js";
+
+  const cart = new Cart();
+  const products = cart.getProducts();
+  const list = document.querySelector(".order-list");
+  const totalEl = document.querySelector(".total-price");
+  if (products.length === 0) {
+    list.innerHTML = `<p class="empty-cart">Your cart is empty.</p>`;
+    totalEl.textContent = "0,00 PLN";
+  } else {
+    list.innerHTML = products.map(p => `
+      <div class="order-item">
+        <span class="item-name">${p.name}</span>
+        <span class="item-price">${(p.price / 100).toFixed(2)} PLN</span>
+      </div>`).join("");
+    const total = products.reduce((sum, p) => sum + p.price, 0);
+    totalEl.textContent = `${(total / 100).toFixed(2)} PLN`;
+  }
+
+  document.getElementById("payment-btn").addEventListener("click", () => {
+    console.log("user buys products", products);
+  });
+</script>
 
             
         <section id="access">
             <section id="client-info">
-            <md-outlined-button class="menu" href="https://www.figma.com/proto/M2K4QJUr4RHqS6JPrL7QHi/portfo-White-Black?node-id=1-1099&p=f&t=Wvn5u8vs64ZRTtdG-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%
-            3A358" target="_blank"> payment </md-outlined-button>
+            <md-outlined-button id="payment-btn" class="menu"> payment </md-outlined-button>
             </section>    
         </section>
         </div>

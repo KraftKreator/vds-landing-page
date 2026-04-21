@@ -33,7 +33,7 @@
            </div>
 
         <nav class="menu-wrapper">
-            <md-outlined-button class="menu" href="./basket.html" target="_blank">+ card </md-outlined-button>
+            <md-outlined-button id="cart-btn" href="basket.html" class="menu">+ cart </md-outlined-button>
             <md-outlined-button class="menu" href="https://www.figma.com/proto/M2K4QJUr4RHqS6JPrL7QHi/portfo-White-Black?node-id=1-1099&p=f&t=Wvn5u8vs64ZRTtdG-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A358" target="_blank"> pre orders </md-outlined-button>
         </nav>
     </header>
@@ -46,7 +46,7 @@
             
         <section id="access">
             <section id="client-info">
-            <md-outlined-button class="menu" href="./basket.html" target="_blank"> + card  </md-outlined-button>
+            <md-outlined-button href="basket.html" class="menu"> + cart  </md-outlined-button>
             </section>    
         </section>
         </div>
@@ -67,8 +67,8 @@
                     
                     <h1>available sizes / uni_S E X </h1>
             
-                    <md-outlined-button class="menu" href="./basket.html" target="_blank"> + card  </md-outlined-button>
-            <a href="./basket.html"  class="size-btn" data-size="S"> 
+                    <md-outlined-button class="menu"> + cart  </md-outlined-button>
+            <a class="buy-btn" data-size="S" data-price="45000"> 
             <section id="access">purchase:
               |Size S</a>
             <section id="client-info">
@@ -76,48 +76,23 @@
             </section>    
             </section>
 
-            <a href="./basket.html" class="size-btn" data-size="M">
+            <a class="buy-btn" data-size="M" data-price="45000">
             <section id="access">
             <section id="client-info">
-            <md-outlined-button class="menu" href="./basket.html" target="_blank"> + card  </md-outlined-button> 
+            <md-outlined-button class="menu"> + cart  </md-outlined-button> 
             </section>
             </section>+ Size M</a>
 
-            <a href="./basket.html" class="size-btn" data-size="L"> 
+            <a class="buy-btn" data-size="L" data-price="45000"> 
             <section id="access">
             <section id="client-info">
-            <md-outlined-button class="menu" href="./basket.html" target="_blank"> + card  </md-outlined-button>   
+            <md-outlined-button class="menu"> + cart  </md-outlined-button>   
             </section>    
             </section>+ Size L</a>
             
         </div>
         </div>
 
-                <script src="js/cart.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.size-btn');
-      buttons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const size = btn.dataset.size;
-          // przykładowy produkt, dopasuj id/name/price/img
-          const item = {
-            id: 'ultimate-black-hoodie',
-            name: 'Ultimate Black Hoodie',
-            size: size,
-            price: 900,
-            qty: 1,
-            img: 'https://placekitten.com/112/112'
-          };
-          // używamy API z cart.js
-          window.LGJCart.addItem(item);
-          // przekieruj do koszyka
-          window.location.href = 'basket.html';
-        });
-      });
-    });
-  </script>
 
          <div class="picture-container">
                     <img src="./images/ultimate-hoodie.jpg" data-hover="./images/VDS_ensemble_kangoor_hoodie_front.jpg">
@@ -132,17 +107,17 @@
 <md-list style="max-width: 300px;">
   <md-list-item data-size="S" class="size-item">
     hoodie size S
-    <img slot="start" style="width: 56px" src="https://placekitten.com/112/112">
+    <img slot="start" style="width: 56px" src="./images/ultimate-hoodie.jpg">
   </md-list-item>
   <md-divider></md-divider>
   <md-list-item data-size="M" class="size-item">
     hoodie size M
-    <img slot="start" style="width: 56px" src="https://placekitten.com/114/114">
+    <img slot="start" style="width: 56px" src="./images/ultimate-hoodie.jpg">
   </md-list-item>
   <md-divider></md-divider>
   <md-list-item data-size="L" class="size-item">
     hoodie size L
-    <img slot="start" style="width: 56px" src="https://placekitten.com/116/116">
+    <img slot="start" style="width: 56px" src="./images/ultimate-hoodie.jpg">
   </md-list-item>
 </md-list>
 
@@ -220,7 +195,8 @@
 <footer>
         <p>ⓡ 2026 design powered by Visual Design Studio | S_JΛ</p>
 </footer> 
-<script src="script.js"></script>
+<script type="module" src="cart.js"></script>
+<script type="module" src="script.js"></script>
 </body>
 </html>
 
