@@ -24,56 +24,143 @@
 
         
 <div class="wrapper">   
-    <header>
-        <img src="./images/vds-logo.png">
-           <div class="burger"> 
-                <span></span>
-                <span></span>   
-                <span></span>
-           </div>
-
-        <nav class="menu-wrapper">
-            
-        </nav>
+    <header class="header">
+        <div id="logotype"><img src="./images/vds-logo.png" width="150"></div>
+        
     </header>
             
-    <div class="title">
+    <div class="space">     
+    </div>
+<div class="title">
             <h3>  Ultimate Black Hoodie </h3>  
+    </div>
+
+
+   <!-- FORMULARZ DANYCH -->
+<section class="shipping-box">
+    <h2 class="box-title">Dane do wysyłki</h2>
+
+    <form class="shipping-form">
+
+        <div class="form-row">
+            <div class="form-field">
+                <label for="first-name">Imię</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-field">
+                <label for="last-name">Nazwisko</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-field full">
+                <label for="address">Adres</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-field full">
+                <label for="city">Miasto</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-field">
+                <label for="postal">Kod pocztowy</label>
+                <input type="text" id="postal" name="postal" required>
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Telefon kontaktowy</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+        </div>
+
+    </form>
+</section>
+
+
+
+    <!-- KOSZYK -->
+    <section class="cart-box">
+        <h2 class="box-title">Koszyk</h2>
+
+        <div class="cart-item">
+            <div class="item-thumb"></div>
+            <div class="item-name">Ultimate Black Hoodie</div>
+            <div class="item-size">S</div>
+            <div class="item-price">450 PLN</div>
+        </div>
+
+        <div class="cart-item">
+            <div class="item-thumb"></div>
+            <div class="item-name">Ultimate Black Hoodie</div>
+            <div class="item-size">S</div>
+            <div class="item-price">450 PLN</div>
+        </div>
+    
+
+    <!-- PODSUMOWANIE -->
+        <section class="summary-box">
+            <div class="summary-row">
+             <span>Razem:</span>
+             <span class="summary-price">900 PLN</span>
+         </div>
+
+            <button class="payment-btn">Payment</button>
+        </section>
+    
+    </section>
+
+
 <div class="basket-container">
                     <h3>Order Basket</h3>
-                    <div class="order-list">
-                        <div class="order-item">
-                            <span class="item-name">Ultimate Black Hoodie – Size S</span>
-                            <span class="item-price"></span>
-                        </div>
-      
-                    </div>
+                    <div class="order-list"></div>
                     <div class="order-total">
                         <span class="total-label">Total:</span>
-                        <span class="total-price">550 PLN</span>
+                        <span class="total-price"></span>
                     </div>
-</div>
+
+<script type="module">
+  import { Cart } from "./cart.js";
+
+  const cart = new Cart();
+  const products = cart.getProducts();
+  const list = document.querySelector(".order-list");
+  const totalEl = document.querySelector(".total-price");
+  if (products.length === 0) {
+    list.innerHTML = `<p class="empty-cart">Your cart is empty.</p>`;
+    totalEl.textContent = "0,00 PLN";
+  } else {
+    list.innerHTML = products.map(p => `
+      <div class="order-item">
+        <span class="item-name">${p.name}</span>
+        <span class="item-price">${(p.price / 100).toFixed(2)} PLN</span>
+      </div>`).join("");
+    const total = products.reduce((sum, p) => sum + p.price, 0);
+    totalEl.textContent = `${(total / 100).toFixed(2)} PLN`;
+  }
+
+  document.getElementById("payment-btn").addEventListener("click", () => {
+    console.log("user buys products", products);
+  });
+</script>
 
             
         <section id="access">
             <section id="client-info">
-            <md-outlined-button class="menu" href="https://www.figma.com/proto/M2K4QJUr4RHqS6JPrL7QHi/portfo-White-Black?node-id=1-1099&p=f&t=Wvn5u8vs64ZRTtdG-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%
-            3A358" target="_blank"> payment </md-outlined-button>
+            <md-outlined-button id="payment-btn" class="menu"> payment </md-outlined-button>
             </section>    
         </section>
         </div>
 
-        <section id="newsletter">
-            <section id="client-info">
-            <h2>shipment & newsletter </h2>
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="client-name" placeholder="Your Name" required>
-            <input type="email" name="client-email" placeholder="Your Email" required>
-            <input type="address" name="client-address" placeholder="Shipping Address, city, street, postal code" required>
-        <button type="submit">SUBMIT</button>
-    </form>
-</section>
+        
         </section>
+        
 <section id="credits"> 
     <hr>
     <h1>Thanks for your purchase!</h1>

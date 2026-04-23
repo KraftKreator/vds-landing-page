@@ -1,3 +1,15 @@
+import { Cart } from "./cart.js";
+
+const _cart = new Cart();
+const _cartBtn = document.getElementById("cart-btn");
+
+function updateCartBadge() {
+  if (!_cartBtn) return;
+  const count = _cart.getProducts().length;
+  _cartBtn.textContent = count > 0 ? `+ cart (${count})` : "+ cart";
+}
+
+updateCartBadge();
 
 // burger service menu
 const burger = document.querySelector('.burger');
@@ -40,6 +52,9 @@ pictureContainers.forEach(container => {
   });
 });
 
+// picture container switcher
+
+
 // Collapsible functionality
 const collapsibles = document.querySelectorAll('.collapsible');
 
@@ -63,27 +78,23 @@ collapsibles.forEach(collapsible => {
   });
 });
 
-// Interactive purchase-list size selection
-const sizeButtons = document.querySelectorAll('.size-btn');
-const sizeItems = document.querySelectorAll('.size-item');
-
-sizeButtons.forEach(button => {
+// Buy buttons → add to cart, update badge, navigate to basket
+document.querySelectorAll('.buy-btn').forEach(button => {
   button.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    
-    const selectedSize = button.getAttribute('data-size');
-    
-    // Remove highlight from all items
-    sizeItems.forEach(item => {
-      item.classList.remove('active');
-    });
-    
-    // Highlight the matching size item
-    const matchingItem = document.querySelector(`.size-item[data-size="${selectedSize}"]`);
-    if (matchingItem) {
-      matchingItem.classList.add('active');
-      // Scroll to the selected item
-      matchingItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
+    e.preventDefault();
+    const size = button.getAttribute('data-size');
+    try {
+      _cart.addProduct({
+        id: `ultimate-black-hoodie-${size.toLowerCase()}`,
+        name: `Ultimate Black Hoodie – Size ${size}`,
+        price: parseInt(button.getAttribute('data-price'), 10),
+        currency: "pln",
+        images: [`${window.location.origin}/images/ultimate-hoodie.jpg`],
+        metadata: { size },
+      });
+    } catch { /* already in cart */ }
+    updateCartBadge();
+    window.location.href = "basket.html";
   });
 });
+
