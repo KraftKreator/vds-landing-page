@@ -731,6 +731,7 @@ section a:hover {
 }
 
 #credits {
+    height: 150px;
     text-align: center;
     justify-content: center;
     background-color: rgba(243, 245, 255, 1);

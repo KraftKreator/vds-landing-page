@@ -14,6 +14,42 @@
 
 }
 
+.product-image {
+    width: 100%;  
+    transition: opacity .3s ease;
+}
+
+/* galeria karty produktu */
+
+.product-thumbs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.product-thumbs img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    
+    cursor: pointer;
+    opacity: .6;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.product-thumbs img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.product-thumbs img.active-thumb {
+    opacity: 1;
+    outline: 2px solid black;
+}
+
+
+
 .product-description {
 
     max-width: 600px;
@@ -24,8 +60,9 @@ display: flex;
 flex-wrap: wrap;
 width:100%;
 min-width: 400px;
-gap: 35px;
+gap: 15px;
 justify-content: center;
+height: auto;
 
 }
 
@@ -50,7 +87,7 @@ transform: translateY(-10px);
 
 .product-image {
 width: 100%;
-border-radius: 10px;
+border-radius: 1px;
 height: auto;
 object-fit: cover;
 }
@@ -68,7 +105,7 @@ margin-bottom: 10px;
 .product-description {
 font-size: 14px;
 color: #666;
-max-width: 800px;
+max-width: 718px;
 margin: 20px auto 0;   /* wyśrodkowanie opisu */
 text-align: left;      /* opis zwykle lepiej wygląda wyrównany do lewej */
 line-height: 1.6;

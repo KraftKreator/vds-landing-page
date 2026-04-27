@@ -56,29 +56,53 @@
 <!-- PRODUCT SECTION -->
 <div class="product-containter">
 
-<div class="product-card">
-<img src="./images/VDS_ensemble_kangoor_hoodie_front.jpg" alt="Product Image" class="product-image">
-<div class="product-details">
-<h2 class="product-title">WOMAN</h2>
-<p class="product-description">A short description of the product goes here.</p>
-<p class="product-price">450 PLN</p>
-<a href="basket.html" class="buy-button">XS</a>
-<a href="basket.html" class="buy-button">S</a>
-<a href="basket.html" class="buy-button">M</a>
-</div>
+    <div class="product-card">
+        <img src="./images/VDS_ensemble_kangoor_hoodie_front.jpg" 
+        alt="Product Image"
+        class="product-image main-product-image">
+        
+        <div class="product-thumbs">
+         <img src="./images/ultimate-hoodie.jpg" data-img="./images/ultimate-hoodie.jpg">
+         <img src="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" data-img="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg">
+         <img src="images/vds-logo.png" data-img="images/vds-logo.png">
+         <img src="images/vds-logo.png" data-img="images/vds-logo.png">
+        </div>
+    
+        <div class="product-details">
+            <h2 class="product-title">WOMAN</h2>
+            <p class="product-description">unisex oversize hoodie girly</p>
+            <p class="product-price">450 PLN</p>
+            <a href="basket.html" class="buy-button">XS</a>
+            <a href="basket.html" class="buy-button">S</a>
+            <a href="basket.html" class="buy-button">M</a>
+        </div>
+    </div>
+
+
+
+    <div class="product-card">
+        <img src="./images/VDS_ensemble_kangoor_hoodie_front.jpg"
+        alt="Product Image"
+        class="product-image main-product-image">
+        <div class="product-thumbs">
+            <img src="./images/ultimate-hoodie.jpg" data-img="./images/ultimate-hoodie.jpg">
+            <img src="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" data-img="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg">
+            <img src="images/vds-logo.png" data-img="images/vds-logo.png">
+            <img src="images/vds-logo.png" data-img="images/vds-logo.png">
+        </div>
+
+        <div class="product-details">
+            <h2 class="product-title">MAN</h2>
+            <p class="product-description">unisex oversize hoodie man</p>
+            <p class="product-price">450 PLN</p>
+            <a href="#" class="buy-button">S</a>
+            <a href="#" class="buy-button">M</a>
+            <a href="#" class="buy-button">L</a>
+        </div>
+    </div>
+
 </div>
 
-<div class="product-card">
-<img src="./images/VDS_ensemble_kangoor_hoodie_front.jpg" alt="Product Image" class="product-image">
-<div class="product-details">
-<h2 class="product-title">MAN</h2>
-<p class="product-description">A short description of the product goes here.</p>
-<p class="product-price">450 PLN</p>
-<a href="#" class="buy-button">S</a>
-<a href="#" class="buy-button">M</a>
-<a href="#" class="buy-button">L</a>
-</div>
-</div>
 
 </div>
 
@@ -97,11 +121,40 @@
 
 
         
-    
+   
 <footer id="basket-footer">
         <p>ⓡ 2026 design powered by Visual Design Studio | S_JΛ</p>
 </footer> 
-<script src="script.js"></script>
+
+<script>
+//imgage switcher
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".product-card").forEach(card => {
+
+        const mainImage = card.querySelector(".main-product-image");
+        const thumbs = card.querySelectorAll(".product-thumbs img");
+
+        if (!mainImage || !thumbs.length) return;
+
+        thumbs.forEach(thumb => {
+            thumb.addEventListener("click", () => {
+
+                mainImage.style.opacity = 0;
+
+                setTimeout(() => {
+                    mainImage.src = thumb.dataset.img;
+                    mainImage.style.opacity = 1;
+                }, 150);
+
+                thumbs.forEach(t => t.classList.remove("active-thumb"));
+                thumb.classList.add("active-thumb");
+            });
+        });
+
+    });
+});</script>
+<script src="script.js"></script> 
 </body>
+
 </html>
 

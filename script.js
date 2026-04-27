@@ -33,26 +33,6 @@ else if (quantity >= 109 && quantity <= 115) size = 'Size L';
  });
 
  
-// picture container hover to switch images
-const pictureContainers = document.querySelectorAll('.picture-container');
-
-pictureContainers.forEach(container => {
-  const img = container.querySelector('img');
-  const originalSrc = img.src;
-  const alternateSrc = img.dataset.hover || originalSrc; // Get alternate image from data-hover attribute
-
-  container.addEventListener('mouseenter', () => {
-    if (img.dataset.hover) {
-      img.src = img.dataset.hover;
-    }
-  });
-
-  container.addEventListener('mouseleave', () => {
-    img.src = originalSrc;
-  });
-});
-
-// picture container switcher
 
 
 // Collapsible functionality
