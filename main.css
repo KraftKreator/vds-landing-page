@@ -404,7 +404,7 @@ border-radius: 40px;
 .description-container p {
     height: 200px;
     font-size: 12pt;
-    overflow-y:visible ;
+    overflow-y: scroll;
     background-color: white;
 }
 .description-container h1 {
@@ -789,7 +789,7 @@ span {
     height: 300px;
     align-items: center;
     background-color: white;
-    border-color: green;
+    border-color: rgb(243, 0, 0);
     border-style: solid;
     border-width: 0.1px;
     max-width: 600px;
@@ -825,14 +825,19 @@ span {
 
 .social-btn {
     margin: 10px;
-    position: right;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     max-width: 380px;
     width: 100%;
-    padding: 14px;
-    background: black;
-    color: white;
+    padding: 22px;
+    background: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
     border: none;
-    border-radius: 20px;
+    border-radius: 0px;
+    align-items: center;
+    
+    text-decoration: none;
     font-size: 16px;
     cursor: pointer;
     
