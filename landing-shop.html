@@ -106,13 +106,29 @@
 
 </div>
 
+<button class="collapsible">Size Guide Man</button>
+<div class="content"><img src="images/size-guide.webp" heigh="200px">
+  <p>*Lorem ipsum dolor sit amet (...)</p>
+</div>
+<button class="collapsible">Size Guide Woman</button>
+<div class="content"><img src="images/size-guide.webp">
+  <p>*Lorem ipsum dolor sit amet (...)</p>
+</div>
+<button class="collapsible">About the Brand / Orders on Demand</button>
+<div class="content">
+    <span href="terms.html"> Shipping </span>
+    <span href="terms.html"> Returns </span>
+  <p>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
 
 
         
 <section id="credits"> 
-    <hr>
+    
+    
     <h1>uni___S____E____X</h1>
-    <hr>
+    
 </section>
         
 </section> 
@@ -124,6 +140,8 @@
    
 <footer id="basket-footer">
         <p>ⓡ 2026 design powered by Visual Design Studio | S_JΛ</p>
+        <span>Regulamin</span>
+        <span>Pytania i Odpowiedzi</span>
 </footer> 
 
 <script>
@@ -153,6 +171,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 });</script>
+<script>
+// Collapsible functionality
+const collapsibles = document.querySelectorAll('.collapsible');
+
+collapsibles.forEach(collapsible => {
+  collapsible.addEventListener('click', function() {
+    // Toggle active class on button
+    this.classList.toggle('active');
+    
+    // Get the content element that follows this button
+    const content = this.nextElementSibling;
+    
+    if (content && content.classList.contains('content')) {
+      // If content is hidden, show it
+      if (content.style.maxHeight === '' || content.style.maxHeight === '0px') {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        // If content is shown, hide it
+        content.style.maxHeight = '0px';
+      }
+    }
+  });
+});</script>
+
+
 <script src="script.js"></script> 
 </body>
 

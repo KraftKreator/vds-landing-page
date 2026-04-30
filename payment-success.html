@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./imgages/icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="main.css">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="https://esm.run/@material/web/all"></script>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLQBENDFCN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QLQBENDFCN');
+</script>
+<body>
+    
+
+        
+<div class="wrapper">   
+    <header class="header">
+        <div id="logotype"><img src="./images/vds-logo.png" width="110"></div>
+        
+    </header>
+            
+    <div class="space">     
+    </div>
+<div class="title">
+            <h3>  Ultimate Black Hoodie </h3>  
+            <div class="divider"></div>
+    </div>
+
+
+
+<section class="payment-status">
+    <div class="box-title">Payment success!</div>
+
+    <div class="payment-status-image"><img src="./images/vds-logo.png" width="900">
+    </div>
+
+
+    </form>
+</section>
+
+    <!-- PODSUMOWANIE -->
+        <section class="socials">
+            <div class="socials-header">
+             <span>Join the club
+                
+                
+                <hr>
+                
+             </span>
+             
+            </div>
+            <div class="social-buttons">
+                <button class="social-btn">instagram</button>
+                <button class="social-btn">facebook</button>
+                
+                <button class="social-btn">+ pre order</button>
+            </div>
+            <hr>
+        </section>
+    
+    </section>
+
+
+
+
+<script type="module">
+  import { Cart } from "./cart.js";
+
+  const cart = new Cart();
+  const products = cart.getProducts();
+  const list = document.querySelector(".order-list");
+  const totalEl = document.querySelector(".total-price");
+  if (products.length === 0) {
+    list.innerHTML = `<p class="empty-cart">Your cart is empty.</p>`;
+    totalEl.textContent = "0,00 PLN";
+  } else {
+    list.innerHTML = products.map(p => `
+      <div class="order-item">
+        <span class="item-name">${p.name}</span>
+        <span class="item-price">${(p.price / 100).toFixed(2)} PLN</span>
+      </div>`).join("");
+    const total = products.reduce((sum, p) => sum + p.price, 0);
+    totalEl.textContent = `${(total / 100).toFixed(2)} PLN`;
+  }
+
+  document.getElementById("payment-btn").addEventListener("click", () => {
+    console.log("user buys products", products);
+  });
+</script>
+
+            
+
+
+        
+        </section>
+        
+<section id="credits"> 
+    <hr>
+    <h1>Thanks for your purchase!</h1>
+    <hr>
+</section>
+        
+</section> 
+
+
+
+
+        
+    
+<footer id="basket-footer">
+        <p>ⓡ 2026 design powered by Visual Design Studio | S_JΛ</p>
+</footer> 
+<script src="script.js"></script>
+</body>
+</html>
+

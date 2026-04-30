@@ -205,15 +205,16 @@ md-outlined-button {
 
 /* PODSUMOWANIE */
 .summary-box {
-    
-    display: block;
+    position: relative;
+    display: inline-block;
+    width: 100%;
     justify-content: right;
     background-color: white;
     
 }
 .summary-row {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     gap: 15px;
     font-size: 22px;
     font-weight: 500;
@@ -224,6 +225,7 @@ md-outlined-button {
 }
 
 .payment-btn {
+    margin-top: 15px;
     margin-left: 160px;
     position: right;
     max-width: 350px;
@@ -402,7 +404,7 @@ border-radius: 40px;
 .description-container p {
     height: 200px;
     font-size: 12pt;
-    overflow-y: scroll;
+    overflow-y:visible ;
     background-color: white;
 }
 .description-container h1 {
@@ -626,23 +628,24 @@ section a {
 }
 
 .collapsible {
-  background-color: rgba(243, 245, 255, 1);
+  background-color: rgb(17, 17, 17);
     mix-blend-mode: difference;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   padding: 32px;
+  height: 80px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 28px;
-  transition: background-color 0.3s ease;
-  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 1.2s ease;
+  font-weight: 100;
 }
 
 .collapsible:hover {
   background-color: #666;
-  color: rgb(0, 0, 0);
+  color: rgb(231, 231, 231);
 }
 
 .collapsible.active {
@@ -669,7 +672,7 @@ section a {
   text-align: center;
   outline: none;
   font-size: 32px;
-  transition: background-color 1.3s ease;
+  transition: background-color 1.9s ease;
   font-weight: 500;
 }
 
@@ -740,23 +743,25 @@ section a:hover {
     
 }
 
-footer p {
+footer {
+    display: inline-flex;
     width: 100%;
     height: 60px;
-    padding: 10px 20px 5px 10px;
+    padding-top: 6px;
     text-align: right;
     background: rgba(243, 245, 255, 1);
     mix-blend-mode: difference;
     position: sticky;
+    position: bottom;
     
 }
 
-#basket-footer footer {
-height: 800px;
-position: bottom;
-
-
+/* Footer features: terms and conditions, FAQ */
+span {
+    margin-left: 35px;    
 }
+
+
 
 /* Interactive purchase-list styling */
 .size-item {
@@ -777,4 +782,58 @@ position: bottom;
     
     justify-content: center;
 
+}
+
+.payment-status {
+    overflow: hidden;
+    height: 300px;
+    align-items: center;
+    background-color: white;
+    border-color: green;
+    border-style: solid;
+    border-width: 0.1px;
+    max-width: 600px;
+    width:75%;
+    min-width: 280px;
+}
+.payment-status-image {
+    width: 280px;
+}
+
+
+.socials {
+    display: inline-block;
+    width: 100%;
+    background: white;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.socials-header {
+    font-size: 34px;
+    font-weight: 800;
+    padding: 20px;
+    position: center;
+    text-align: center;
+}
+
+.social-buttons {
+    display: flex;
+
+}
+
+.social-btn {
+    margin: 10px;
+    position: right;
+    max-width: 380px;
+    width: 100%;
+    padding: 14px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    
 }
