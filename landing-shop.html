@@ -21,10 +21,10 @@
   gtag('config', 'G-QLQBENDFCN');
 </script>
 <body>
-    
 
-        
-<div class="wrapper">   
+<div class="modal-backdrop" id="modal-backdrop"></div>
+
+<div class="wrapper">
     <header class="header">
         <div id="logotype"><img src="./images/vds-logo.png" height="70"></div>
         
@@ -72,9 +72,9 @@
             <h2 class="product-title">WOMAN</h2>
             <p class="product-description">unisex oversize hoodie girly</p>
             <p class="product-price">450 PLN</p>
-            <a href="basket.html" class="buy-button">XS</a>
-            <a href="basket.html" class="buy-button">S</a>
-            <a href="basket.html" class="buy-button">M</a>
+            <button class="buy-button size-selector" data-sex="W" data-size="XS">XS</button>
+            <button class="buy-button size-selector" data-sex="W" data-size="S">S</button>
+            <button class="buy-button size-selector" data-sex="W" data-size="M">M</button>
         </div>
     </div>
 
@@ -95,14 +95,17 @@
             <h2 class="product-title">MAN</h2>
             <p class="product-description">unisex oversize hoodie man</p>
             <p class="product-price">450 PLN</p>
-            <a href="#" class="buy-button">S</a>
-            <a href="#" class="buy-button">M</a>
-            <a href="#" class="buy-button">L</a>
+            <button class="buy-button size-selector" data-sex="M" data-size="S">S</button>
+            <button class="buy-button size-selector" data-sex="M" data-size="M">M</button>
+            <button class="buy-button size-selector" data-sex="M" data-size="L">L</button>
         </div>
     </div>
 
 </div>
 
+<div class="purchase-wrapper">
+  <button class="purchase-btn">purchase</button>
+</div>
 
 </div>
 
@@ -196,7 +199,29 @@ collapsibles.forEach(collapsible => {
 });</script>
 
 
-<script src="script.js"></script> 
+<script src="script.js"></script>
+<script>
+// Size selector
+let selectedSize = null;
+
+document.querySelectorAll('.size-selector').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const card = this.closest('.product-card');
+    document.querySelectorAll('.size-selector').forEach(b => b.classList.remove('selected'));
+    this.classList.add('selected');
+    selectedSize = this.getAttribute('data-size');
+    const selectedSex = this.getAttribute('data-sex');
+    console.log('Selected size:', selectedSize, 'Selected sex:', selectedSex);
+    
+  });
+});
+
+document.querySelector('.purchase-btn').addEventListener('click', function() {
+  console.log('purchase clicked, selected size:', selectedSize);
+  document.getElementById('modal-backdrop').classList.add('active');
+});
+</script>
 </body>
 
 </html>
