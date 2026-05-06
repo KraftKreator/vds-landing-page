@@ -223,7 +223,7 @@ md-outlined-button {
 .summary-row span {
   font-weight: 600;  
 }
-
+/*payment trigger below shipping form*/
 .payment-btn {
     margin-top: 15px;
     margin-left: 160px;
@@ -275,15 +275,16 @@ md-outlined-button {
     margin: 20px auto;
 }   
 button {
-    height: 80px;
+    height: 45px;
     width: 100%;
-    font-size: 18pt;
+    font-size: 12pt;
     font-weight: 700;
-    background-color: aliceblue;
+    background-color: rgb(12, 12, 12);
 }
+
 input {
     height: 80px;
-    width: 100%;
+width: 100%;
 font-size: 18pt;
 }
 
@@ -561,7 +562,7 @@ border-radius: 40px;
 
 section {
     max-width: 100%;
-    margin: 10px auto; /* centrowanie sekcji */
+    margin: 0px auto; /* centrowanie sekcji */
     padding: 20px;
     border-radius: 10px;
 }
@@ -584,7 +585,7 @@ section h3 {
 section a {
     display: block;
     font-size: 22px;
-    color: black;
+    color: rgb(236, 98, 17);
     margin: 20px 0;
     text-align: center;
     padding: 1REM;
@@ -651,6 +652,11 @@ section a {
 .collapsible.active {
   background-color: #555;
 }
+.collapsible a {
+    display: flex;
+    font-size: 22px;
+}
+
 
 .content {
   padding: 0 18px;
@@ -660,30 +666,7 @@ section a {
   background-color: #f1f1f1;
   padding: 0;
 }
-.size-selector {
 
-  background-color: rgba(243, 245, 255, 1);
-    mix-blend-mode: difference;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 32px;
-  transition: background-color 1.9s ease;
-  font-weight: 500;
-}
-
-.size-selector:hover {
-  background-color: #666;
-  color: rgb(0, 0, 0);
-}
-
-.size-selector.active {
-  background-color: #555;
-}
 
 
 .divider-wrap {
@@ -734,7 +717,7 @@ section a:hover {
 }
 
 #credits {
-    height: 150px;
+    height: 220px;
     text-align: center;
     justify-content: center;
     background-color: rgba(243, 245, 255, 1);
@@ -743,11 +726,18 @@ section a:hover {
     
 }
 
+.vds-type-image {
+    width: 100%;
+    height: auto;
+    
+}
+
 footer {
+    justify-content: end;
     display: inline-flex;
     width: 100%;
     height: 60px;
-    padding-top: 6px;
+    padding-top: 16px;
     text-align: right;
     background: rgba(243, 245, 255, 1);
     mix-blend-mode: difference;
@@ -763,7 +753,7 @@ span {
 
 
 
-/* Interactive purchase-list styling */
+/* Interactive .purchase-btn list styling */
 .size-item {
     display: none;
     transition: all 0.3s ease;
@@ -799,6 +789,12 @@ span {
 .payment-status-image {
     width: 280px;
 }
+
+.cta-news a {
+     background-color: orangered;
+}
+
+
 .payment-status-failed {
     overflow: hidden;
     height: 300px;

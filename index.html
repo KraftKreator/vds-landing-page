@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vds | shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/vds-favicon-white.png" type="image/png">
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="product-component.css">
+
+    <script type="module" src="https://esm.run/@material/web/all"></script>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLQBENDFCN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QLQBENDFCN');
+</script>
+<body>
+
+<div class="modal-backdrop" id="modal-backdrop">
+
+   <!-- FORMULARZ DANYCH -->
+<section class="shipping-box">
+    <div class="box-title">Dane do wysyłki</div>
+
+    <form class="shipping-form">
+
+        <div class="form-row">
+            <div class="form-field">
+                <label for="first-name">Imię</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-field">
+                <label for="last-name">Nazwisko</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-field full">
+                <label for="address">Adres</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-field full">
+                <label for="city">Miasto</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-field">
+                <label for="postal">Kod pocztowy</label>
+                <input type="text" id="postal" name="postal" required>
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Telefon kontaktowy</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+        </div>
+
+    </form>
+</section>
+
+
+
+    <!-- KOSZYK -->
+    <section class="cart-box">
+        <h2 class="box-title">Koszyk</h2>
+
+        <div class="cart-item">
+            <div class="item-thumb"></div>
+            <div class="item-name">Ultimate Black Hoodie</div>
+            <div class="item-size">S</div>
+            <div class="item-price">450 PLN</div>
+        </div>
+
+    
+
+    <!-- PODSUMOWANIE -->
+        <section class="summary-box">
+            <div class="summary-row">
+             <span>Razem:</span>
+             <span class="summary-price">450 PLN</span>
+         
+            </div>
+            <hr>
+            <button class="payment-btn">Payment</button>
+
+
+</div>
+
+        
+<div class="wrapper">   
+    <header class="header">
+        <div id="logotype"><img src="./images/vds-logo.png" height="70"></div>
+        
+    </header>
+            
+    <div class="space">     
+    </div>
+
+
+<!-- SPACE UNDER HEADER -->
+<div class="title-containter">
+    <div class="title"> 
+        <h1>  Ultimate Black Hoodie </h1>  
+        <div line="0,3" max-width="800"></div>
+    </div>
+    
+
+
+   
+</div>
+
+<!-- PRODUCT SECTION -->
+<div class="product-containter">
+
+    <div class="product-card">
+        <img src="./images/VDS_ensemble_kangoor_hoodie_front.jpg" 
+        alt="Product Image"
+        class="product-image main-product-image">
+        
+        <div class="product-thumbs">
+         <img src="./images/ultimate-hoodie.jpg" data-img="./images/ultimate-hoodie.jpg">
+         <img src="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" data-img="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg">
+         <img src="images/vds-logo.png" data-img="images/vds-logo.png">
+         <img src="images/vds-logo.png" data-img="images/vds-logo.png">
+        </div>
+    
+        <div class="product-details">
+            <h2 class="product-title">WOMAN</h2>
+            <p class="product-description">unisex oversize hoodie girly</p>
+            <p class="product-price">450 PLN</p>
+             <button class="buy-button size-selector" data-sex="W" data-size="S">S</button>
+            <button class="buy-button size-selector" data-sex="W" data-size="M">M</button>
+            <button class="buy-button size-selector" data-sex="W" data-size="L">L</button>
+        </div>
+    </div>
+
+
+
+    <div class="product-card">
+        <img src="./images/VDS_ensemble_kangoor_hoodie_front.jpg"
+        alt="Product Image"
+        class="product-image main-product-image">
+        <div class="product-thumbs">
+            <img src="./images/ultimate-hoodie.jpg" data-img="./images/ultimate-hoodie.jpg">
+            <img src="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" data-img="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg">
+            <img src="images/vds-logo.png" data-img="images/vds-logo.png">
+            <img src="images/vds-logo.png" data-img="images/vds-logo.png">
+        </div>
+
+        <div class="product-details">
+            <h2 class="product-title">MAN</h2>
+            <p class="product-description">unisex oversize hoodie man</p>
+            <p class="product-price">450 PLN</p>
+<button class="buy-button size-selector" data-sex="M" data-size="M">M</button>
+            <button class="buy-button size-selector" data-sex="M" data-size="L">L</button>
+            <button class="buy-button size-selector" data-sex="M" data-size="XL">XL</button>
+        </div>
+    </div>
+
+</div>
+<div class="purchase-wrapper">
+  <button class="purchase-btn">+ shop</button>
+</div>
+ <div class="product-description">
+        <p>▼ The Ultimate Black Hoodie: Premium Design with Ribbed Cuffs and Oversized Hood – High-End Fashion
+                    Simple but well re-think form of a classic hoodie trimmed with high-end industry standards.
+                    Introducing premium reimagined classic hoodie – a perfect blend of simplicity and high-end fashion. This expertly crafted hoodie features ribbed cuffs and a well-designed hood with an ergonomic shape and oversized appeal.
+                    The ribbed cuffs are carefully constructed to provide a snug fit around your wrists, offering a subtle yet fashionable look.
+                    The attention to detail in every stitch and seam speaks to our commitment to delivering a product that surpasses industry standards.
+                    </p>
+    </div>
+
+</div>
+
+<button class="collapsible">Care</button>
+<div class="content"><img src="images/vds-logo.png" height=100>
+  <p>*Care instructions </p>
+  Prasować max. w 110 stopniach
+Prasować max. w 110 stopniach
+Nie wybielać i nie chlorować
+Nie wybielać i nie chlorować
+Nie prać chemicznie
+Nie prać chemicznie
+Nie suszyć w suszarce bębnowej
+Nie suszyć w suszarce bębnowej
+Prać w 40 °C
+Prać w 40 °C
+
+</div>
+<button class="collapsible">Size Guide Man</button>
+<div class="content"><img src="images/size-guide.webp" height=150>
+  <p>*Lorem ipsum dolor sit amet (...)</p>
+</div>
+<button class="collapsible">Size Guide Woman</button>
+<div class="content"><img src="images/size-guide.webp" height=150>
+  <p>*Lorem ipsum dolor sit amet (...)</p>
+</div>
+<button class="collapsible">About the Brand / Orders on Demand</button>
+<div class="content">
+    <a href="shipping.html"> Wysyłka </a>
+    <a href="returns.html"> Zwroty </a>
+    <a href="collabo.html"> Współpraca </a>
+    <a href="collabo.html"> Polityka prywatności </a>
+
+  <p>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+
+        
+<section id="credits"> 
+    
+    <div>
+        <img src="./images/vds-type.png" class="vds-type-image"> 
+    
+    
+    <h1>uni___S____E____X</h1>
+    <hr>
+    </div>
+</section>
+        
+</section> 
+
+
+
+
+        
+   
+<footer id="basket-footer">
+    <a href="Terms.html">Regulaminy</a>
+    <a href="FAQ">Pytania i Odpowiedzi</a>    
+    <p>ⓡ 2026 design powered by Visual Design Studio | S_JΛ</p>
+        
+</footer> 
+
+<script>
+//imgage switcher
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".product-card").forEach(card => {
+
+        const mainImage = card.querySelector(".main-product-image");
+        const thumbs = card.querySelectorAll(".product-thumbs img");
+
+        if (!mainImage || !thumbs.length) return;
+
+        thumbs.forEach(thumb => {
+            thumb.addEventListener("click", () => {
+
+                mainImage.style.opacity = 0;
+
+                setTimeout(() => {
+                    mainImage.src = thumb.dataset.img;
+                    mainImage.style.opacity = 1;
+                }, 150);
+
+                thumbs.forEach(t => t.classList.remove("active-thumb"));
+                thumb.classList.add("active-thumb");
+            });
+        });
+
+    });
+});</script>
+<script>
+// Size selector
+let selectedSize = null;
+
+document.querySelectorAll('.size-selector').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const card = this.closest('.product-card');
+    document.querySelectorAll('.size-selector').forEach(b => b.classList.remove('selected'));
+    this.classList.add('selected');
+    selectedSize = this.getAttribute('data-size');
+    const selectedSex = this.getAttribute('data-sex');
+    console.log('Selected size:', selectedSize, 'Selected sex:', selectedSex);
+    
+  });
+});
+
+document.querySelector('.purchase-btn').addEventListener('click', function() {
+  console.log('purchase clicked, selected size:', selectedSize);
+  document.getElementById('modal-backdrop').classList.add('active');
+});
+</script>
+
+<script>
+// Collapsible functionality
+const collapsibles = document.querySelectorAll('.collapsible');
+
+collapsibles.forEach(collapsible => {
+  collapsible.addEventListener('click', function() {
+    // Toggle active class on button
+    this.classList.toggle('active');
+    
+    // Get the content element that follows this button
+    const content = this.nextElementSibling;
+    
+    if (content && content.classList.contains('content')) {
+      // If content is hidden, show it
+      if (content.style.maxHeight === '' || content.style.maxHeight === '0px') {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        // If content is shown, hide it
+        content.style.maxHeight = '0px';
+      }
+    }
+  });
+});</script>
+
+
+<script src="script.js"></script> 
+</body>
+
+</html>
+
