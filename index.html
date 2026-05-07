@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="product-component.css">
 
     <script type="module" src="https://esm.run/@material/web/all"></script>
+    <style>
+       
+    </style>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLQBENDFCN"></script>
 <script>
@@ -25,80 +28,104 @@
 <div class="modal-backdrop" id="modal-backdrop">
 
    <!-- FORMULARZ DANYCH -->
-<section class="shipping-box">
-    <div class="box-title">Dane do wysyłki</div>
+<div class="modal-content">
+    <button class="close-modal" id="close-modal">&times;</button>    
+    <section class="shipping-box">
+        <div class="box-title">Dane do wysyłki</div>
 
-    <form class="shipping-form">
+        <form class="shipping-form">
 
-        <div class="form-row">
-            <div class="form-field">
-                <label for="first-name">Imię</label>
-                <input type="text" id="first-name" name="first-name" required>
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="first-name">Imię</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="last-name">Nazwisko</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
             </div>
 
-            <div class="form-field">
-                <label for="last-name">Nazwisko</label>
-                <input type="text" id="last-name" name="last-name" required>
+            <div class="form-row">
+                <div class="form-field full">
+                    <label for="address">Adres</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field full">
+                    <label for="city">Miasto</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="postal">Kod pocztowy</label>
+                    <input type="text" id="postal" name="postal" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="phone">Telefon kontaktowy</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="newsletter">newsletter</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    
+                    
+                </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="email">e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                
             </div>
         </div>
 
-        <div class="form-row">
-            <div class="form-field full">
-                <label for="address">Adres</label>
-                <input type="text" id="address" name="address" required>
-            </div>
-        </div>
+            
+            
 
-        <div class="form-row">
-            <div class="form-field full">
-                <label for="city">Miasto</label>
-                <input type="text" id="city" name="city" required>
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-field">
-                <label for="postal">Kod pocztowy</label>
-                <input type="text" id="postal" name="postal" required>
-            </div>
-
-            <div class="form-field">
-                <label for="phone">Telefon kontaktowy</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-        </div>
-
-    </form>
-</section>
-
-
-
-    <!-- KOSZYK -->
-    <section class="cart-box">
-        <h2 class="box-title">Koszyk</h2>
-
-        <div class="cart-item">
-            <div class="item-thumb"></div>
-            <div class="item-name">Ultimate Black Hoodie</div>
-            <div class="item-size">S</div>
-            <div class="item-price">450 PLN</div>
-        </div>
-
+            
+        </form>
+    
+    </section>
     
 
-    <!-- PODSUMOWANIE -->
-        <section class="summary-box">
-            <div class="summary-row">
-             <span>Razem:</span>
-             <span class="summary-price">450 PLN</span>
-         
+        <!-- KOSZYK -->
+        <section class="cart-box">
+            <h2 class="box-title">Koszyk</h2>
+
+            <div class="cart-item">
+                <div class="item-thumb"></div>
+                <div class="item-name">Ultimate Black Hoodie</div>
+                <div class="item-size">S</div>
+                <div class="item-price">450 PLN</div>
             </div>
-            <hr>
-            <button class="payment-btn">Payment</button>
+
+        
+
+        <!-- PODSUMOWANIE -->
+            <section class="summary-box">
+                <div class="summary-row">
+                <span>Razem:</span>
+                <span class="summary-price">450 PLN</span>
+            
+                </div>
+                <hr>
+                <button class="payment-btn">Payment</button>
 
 
+    </div>
 </div>
-
         
 <div class="wrapper">   
     <header class="header">
