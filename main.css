@@ -16,8 +16,10 @@ body {
 
 /* Wrapper jako główny kontener */
 .wrapper {
+    height: 100%;
     width:100%;
     display: inline-block;
+    
     
 }
 header {
@@ -34,7 +36,7 @@ header {
     
     text-align: right;
     /* mix-blend-mode: difference;  dynamiczny efekt odwrócenia względem tła */     
-    z-index: 999;
+    z-index: 998;
     
 }
 
@@ -85,6 +87,7 @@ md-outlined-button {
 
 .modal-content{
     display: flex;
+    
     padding-bottom: 35px;
     flex-direction: column;
     align-items: center;
@@ -96,13 +99,15 @@ md-outlined-button {
     margin: 0 auto;
     max-height: calc(100vh - 40px);
     overflow-y: auto;
+    z-index: 999;
 }
 /* FORMULARZ */
 /* --- SHIPPING BOX --- */
 
 
 
-.shipping-box {
+section .shipping-box {
+    margin-top: 70px;
     min-height: 550px;
     width: 80vw;
     max-width: 900px;
@@ -190,8 +195,7 @@ md-outlined-button {
     height: 100px;
 }
 .newsletter-checkbox {
-    width: 100px;
-    height: 100px;
+    
     display: flex;
     position: relative;
     align-items: center;
@@ -872,14 +876,18 @@ span {
     position: center;
     text-align: center;
 }
-
+.socials-description {
+    display:grid;
+    grid-auto-flow: row;
+    justify-content: center;
+}
 .social-buttons {
     display: flex;
 
 }
 
 .social-btn {
-    margin: 10px;
+    margin: 5px;
     display:flex;
     justify-content: center;
     align-items: center;
