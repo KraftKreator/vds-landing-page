@@ -30,9 +30,10 @@ header {
     justify-content: center;
     
     width: 100%;
-    height: 80px;
+    height: 72px;
+    backdrop-filter: blur(100px);  
   background: rgba(255, 255, 255, 0.945); /* półprzezroczyste tło */
-    backdrop-filter: blur(60px);  
+    
     
     text-align: right;
     /* mix-blend-mode: difference;  dynamiczny efekt odwrócenia względem tła */     
@@ -44,7 +45,7 @@ header {
 
 
 md-outlined-button {
-    height: 80px;
+    height: 72px;
     --md-sys-color-primary: black;
     --md-sys-color-on-primary: black;
     --md-outlined-button-outline-width: 0.5px;
@@ -73,7 +74,10 @@ md-outlined-button {
     text-decoration: underline;
     
 }
-
+#modal-backdrop {
+    justify-content: center;
+    align-items: center;
+}
 .modal {
     position: fixed;
     inset: 0;
@@ -87,17 +91,17 @@ md-outlined-button {
 
 .modal-content{
     display: flex;
-    
+    padding-top: 20px;
     padding-bottom: 35px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0px;
     background-color: white;
-    width: 80vw;
+    width: 98vw;
     max-width: 900px;
     margin: 0 auto;
-    max-height: calc(100vh - 40px);
+    max-height: calc(100vh - 80px);
     overflow-y: auto;
     z-index: 999;
 }
@@ -106,7 +110,7 @@ md-outlined-button {
 
 
 
-section .shipping-box {
+.shipping-box {
     margin-top: 70px;
     min-height: 550px;
     width: 80vw;
@@ -150,6 +154,7 @@ section .shipping-box {
 
 /* Pola */
 .form-field {
+    border-left: #000000 4px;
     margin: 10px;
     max-height: 30px;
     display: flex;
@@ -174,8 +179,10 @@ section .shipping-box {
 .form-field input {
     margin: 2px 2px 2px 2px;
     padding: 10px 12px;
-    border: 1px solid #b3b3b3;
-    border-radius: 3px;
+    
+    border-top: #000000 ;
+    border-left: #000000 ;
+    border-radius: 0.4px;
     font-size: 14px;
     background: #fff;
     outline: none;
@@ -212,29 +219,33 @@ section .shipping-box {
 }
 
 .cart-item {
+    color: gray;
     padding-left: 5px;
-    height: 90px;
+    height: 100px;
     max-width: 100%;
     display: grid;
     grid-template-columns: 70px 80px 40px 1fr;
     align-items: center;
     gap: 10px;
     padding: 10px 0;
+    border-top: #0088ff 0.4px;
     border-bottom: 1px solid #ddd;
-    border-radius: 20px;
+    border-radius: 0px;
     background-color: white;
     overflow: hidden;
 }
 
-.item-thumb {
+.item-thumb img {
     margin-left: 3px;
     width: 70px;
     height: 70px;
     background: #ddd;
-    border-radius: 12px;
+    border-radius: 1.5px;
+    object-fit: cover;
 }
 
 .item-name {
+    
     margin-left: 3px;
     font-size: 12px;
     max-width: 160px;
@@ -242,6 +253,7 @@ section .shipping-box {
 
 
 .item-size {
+    
     text-align:right;
     margin-right: 10px;
     font-weight: bold;
@@ -249,7 +261,7 @@ section .shipping-box {
 
 .item-price {
     font-weight: bold;
-    margin-right: 100px;
+    margin-right: 70px;
 }
 
 /* PODSUMOWANIE */

@@ -105,18 +105,23 @@ margin: 15px;
 }
 
 .product-description {
+padding: 20px 10px;
 font-size: 14px;
 color: #666;
+background-color: #ffffff3a;
+backdrop-filter: blur(15px);
+
+
 max-width: 718px;
-margin: 20px auto 0;   /* wyśrodkowanie opisu */
-text-align: left;      /* opis zwykle lepiej wygląda wyrównany do lewej */
+margin: 20px auto 0;   
+text-align: left;      
 
 
 }
 
 p {
     margin: 10px;
-    color: rgb(0, 0, 0);
+    
     line-height: 1.2;
     border-width: 1px;
     border-color: black;
@@ -189,6 +194,7 @@ color: #333;
     border-radius: 60px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 40px -35px 30px 0px rgba(24, 24, 24, 0.2);
 }
 
 .modal-backdrop {

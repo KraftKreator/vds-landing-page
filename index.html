@@ -107,7 +107,7 @@
             <h2 class="box-title">Koszyk</h2>
 
             <div class="cart-item">
-                <div class="item-thumb"></div>
+                <div class="item-thumb"></div> 
                 <div class="item-name">Ultimate Black Hoodie</div>
                 <div class="item-size">S</div>
                 <div class="item-price">450 PLN</div>
@@ -154,10 +154,11 @@
 <!-- PRODUCT SECTION -->
 <div class="product-containter">
 
-    <div class="product-card">
+    <div class="product-card" data-sex="W">
         <img src="./images/VDS_ensemble_kangoor_hoodie_front.jpg" 
         alt="Product Image"
-        class="product-image main-product-image">
+        class="product-image main-product-image"
+        data-sex="W">
         
         <div class="product-thumbs">
          <img src="./images/ultimate-hoodie.jpg" data-img="./images/ultimate-hoodie.jpg">
@@ -179,7 +180,7 @@
 
 
 
-    <div class="product-card">
+    <div class="product-card" data-sex="M">
         <img src="./images/VDS_ensemble_kangoor_hoodie_front.jpg"
         alt="Product Image"
         class="product-image main-product-image">
@@ -321,17 +322,38 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 // Size selector
 let selectedSize = null;
+let selectedSex = null;
+
+const cartThumb = document.querySelector('.item-thumb');
+const cartSizeLabel = document.querySelector('.item-size');
+
+function updateCartThumbImage(sex) {
+  const productCard = document.querySelector(`.product-card[data-sex="${sex}"]`);
+  if (!productCard) return;
+
+  const mainImage = productCard.querySelector('.main-product-image');
+  if (!mainImage) return;
+
+  const imgSrc = mainImage.src;
+  cartThumb.innerHTML = `<img class="cart-thumb-image" src="${imgSrc}" alt="Cart item">`;
+}
 
 document.querySelectorAll('.size-selector').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
-    const card = this.closest('.product-card');
     document.querySelectorAll('.size-selector').forEach(b => b.classList.remove('selected'));
     this.classList.add('selected');
     selectedSize = this.getAttribute('data-size');
-    const selectedSex = this.getAttribute('data-sex');
+    selectedSex = this.getAttribute('data-sex');
     console.log('Selected size:', selectedSize, 'Selected sex:', selectedSex);
-    
+
+    if (cartSizeLabel) {
+      cartSizeLabel.textContent = selectedSize;
+    }
+
+    if (selectedSex) {
+      updateCartThumbImage(selectedSex);
+    }
   });
 });
 
