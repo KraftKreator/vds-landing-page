@@ -3,3 +3,8 @@
     "vanilla-framework": "^4.51.0"
   }
 }
+
+"scripts": {
+  "build": "sass scss/styles.scss dist/styles.css --style=compressed",
+  "watch": "sass --watch scss/styles.scss dist/styles.css"
+}

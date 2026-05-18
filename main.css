@@ -125,7 +125,8 @@ md-outlined-button {
 
 .box-title {
     font-size: 16px;
-    font-weight: 20;
+    font-weight: 200;
+    margin-top: 20px;
     margin-bottom: 8px;
 }
 
@@ -703,6 +704,16 @@ section a {
   font-size: 14px;
   transition: background-color 1.2s ease;
   font-weight: 100;
+}
+
+.inline-list {
+    background-color: rgb(241, 241, 241);
+    margin: 20px 0 0 75px;
+    height: 100px;
+    display: flex;
+    gap:40px;
+    margin-right: 15px;
+    align-content: center;
 }
 
 .collapsible:hover {
