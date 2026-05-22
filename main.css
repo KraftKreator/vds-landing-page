@@ -9,7 +9,7 @@ body {
     margin: 0; 
     font-family: 'Archivo', sans-serif;
     background-color: rgb(255, 255, 255);
-   background: url(images/white-photo-background.png) no-repeat center center fixed;/* tlo */
+   background: url(images/vdswebbackground-01.png) no-repeat center center fixed;/* tlo */
     background-size: cover;
     justify-content: center;
 }
@@ -24,15 +24,15 @@ body {
 }
 header {
     display: flex;
-    opacity: 0.95;
+    
     position: fixed;
     
     justify-content: center;
     
     width: 100%;
     height: 72px;
-    backdrop-filter: blur(100px);  
-  background: rgba(255, 255, 255, 0.945); /* półprzezroczyste tło */
+     backdrop-filter: blur(80px); 
+  background-color: rgb(255, 255, 255); /* półprzezroczyste tło */
     
     
     text-align: right;
@@ -75,10 +75,12 @@ md-outlined-button {
     
 }
 #modal-backdrop {
+    backdrop-filter: blur(4px);    
     justify-content: center;
     align-items: center;
 }
 .modal {
+    margin-top: 40px;
     position: fixed;
     inset: 0;
     display: flex;
@@ -91,7 +93,7 @@ md-outlined-button {
 
 .modal-content{
     display: flex;
-    padding-top: 20px;
+    padding-top: 200px;
     padding-bottom: 35px;
     flex-direction: column;
     align-items: center;
@@ -100,7 +102,7 @@ md-outlined-button {
     background-color: white;
     width: 98vw;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 30px auto;
     max-height: calc(100vh - 80px);
     overflow-y: auto;
     z-index: 999;
@@ -787,7 +789,17 @@ section a:hover {
     margin: 10px 10px;
     display: flex;
 }
-
+.about-intro {
+    margin: 20px;
+    text-align: justify;
+    justify-content: center;
+    line-height: 2.80px;
+    align-items: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 #credits {
     height: 220px;
     text-align: center;
@@ -847,9 +859,13 @@ span {
 }
 
 .payment-status-success {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     overflow: hidden;
-    height: 300px;
-    align-items: center;
+    height: 250px;  
     background-color: white;
     border-color: rgb(0, 243, 41);
     border-style: solid;
@@ -860,6 +876,7 @@ span {
 }
 .payment-status-image {
     width: 280px;
+    margin: 20px auto;
 }
 
 .cta-news a {
@@ -893,6 +910,7 @@ span {
 }
 
 .socials-header {
+    width: 100%;
     font-size: 34px;
     font-weight: 800;
     padding: 20px;

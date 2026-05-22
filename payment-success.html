@@ -24,100 +24,77 @@
 
         
 <div class="wrapper">   
-    <header class="header">
-        <div id="logotype"><img src="./images/vds-logo.png" width="110"></div>
-        
-    </header>
-            
-    <div class="space">     
-    </div>
-<div class="title">
-            <h3>  Ultimate Black Hoodie </h3>  
-            <div class="divider"></div>
-    </div>
+              <header class="header">
+                  <div id="logotype"><img src="./images/vds-type.png" width="380"></div>
+                  
+              </header>
+                      
+              <div class="space">     
+              </div>
+          <div class="title">
+                      <h3>  Ultimate Black Hoodie </h3>  
+                      <div class="divider"></div>
+              </div>
 
 
+          <div class="">
+          <section class="payment-status-success">
+              <div class="box-title"><h6>Payment successful!</h6>
+              <div class="payment-status-image"><img src="./images/vdsensemble-signet.png" alt="Payment Success" width="100"></div >
+              </div>
+              </div>
+          
 
-<section class="payment-status-success">
-    <div class="box-title">Payment successfull!</div>
+              </form>
+          </section>
 
-    <div class="payment-status-image"><img src="./images/vds-logo.png" width="900">
-    </div>
-
-
-    </form>
-</section>
-
-    <!-- PODSUMOWANIE -->
-        <div class="socials">
-            <div class="socials-header">
-             <span>Join the club.
-                
-                
-                <hr>
-                
-             </span>
-             
-            </div>
-            <div class="socials-description">
-                
-            <section class="social-buttons">
-                <a href="https://www.instagram.com/vds.ensemble" class="social-btn" target="_blank"> instagram</a>
-                <a href="https://www.facebook.com/vds.ensemble/" class="social-btn" target="_blank">facebook</a>
-                <a href="https://preview.mailerlite.io/preview/2319590/forms/186732052522992984?fresh=1/popup" class="social-btn" target="_blank">newsletter</a>
-                
-            </section>
-            </div>
-            <hr>
-          </div>
-    
-    </section>
-
-
-
-
-<script type="module">
-  import { Cart } from "./cart.js";
-
-  const cart = new Cart();
-  const products = cart.getProducts();
-  const list = document.querySelector(".order-list");
-  const totalEl = document.querySelector(".total-price");
-  if (products.length === 0) {
-    list.innerHTML = `<p class="empty-cart">Your cart is empty.</p>`;
-    totalEl.textContent = "0,00 PLN";
-  } else {
-    list.innerHTML = products.map(p => `
-      <div class="order-item">
-        <span class="item-name">${p.name}</span>
-        <span class="item-price">${(p.price / 100).toFixed(2)} PLN</span>
-      </div>`).join("");
-    const total = products.reduce((sum, p) => sum + p.price, 0);
-    totalEl.textContent = `${(total / 100).toFixed(2)} PLN`;
-  }
-
-  document.getElementById("payment-btn").addEventListener("click", () => {
-    console.log("user buys products", products);
-  });
-</script>
-
-            
-
-
-        
-        </section>
-        
-<section id="credits"> 
-    <hr>
-    <h1>Thanks for your purchase!</h1>
-    <hr>
-</section>
-        
-</section> 
+              <!-- PODSUMOWANIE -->
+                  <div class="socials">
+                      <div class="socials-header">
+                      <span>Join the club.
+                          
+                          
+                          <hr>
+                          
+                      </span>
+                      
+                      
+                      <div class="socials-description">
+                              
+                          <section class="social-buttons">
+                              <a href="https://www.instagram.com/vds.ensemble" class="social-btn" target="_blank"> instagram</a>
+                              <a href="https://www.facebook.com/vds.ensemble/" class="social-btn" target="_blank">facebook</a>
+                              <a href="https://preview.mailerlite.io/preview/2319590/forms/186732052522992984?fresh=1/popup" class="social-btn" target="_blank">newsletter</a>
+                              
+                          </section>
+                          </div>
+                          <hr>
+                        </div>
+                      </div>
+              </section>
 
 
 
 
+
+
+                      
+
+
+                  
+                  </section>
+                  
+          <section id="credits"> 
+              <hr>
+              <h1>Thanks for your purchase!</h1>
+              <hr>
+          </section>
+                  
+          </section> 
+
+
+
+</div>
         
     
 <footer id="basket-footer">

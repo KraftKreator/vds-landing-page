@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "vds-landing-page"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vds-shop"
+	}
+}
