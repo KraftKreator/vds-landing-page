@@ -1,3 +1,6 @@
+
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
 @import "vanilla-framework";
 @include vanilla;
 
@@ -12,5 +15,8 @@
 @include vf-p-inline-list-stretch;
 @include vf-l-site;
 
+.button {
+ margin: 0;
 
+}
 

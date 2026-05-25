@@ -22,91 +22,99 @@
 
 <body>
 <div class="modal-backdrop" id="modal-backdrop">
+
    <!-- FORMULARZ DANYCH -->
     <div class="modal-content">
-        <button class="close-modal" id="close-modal">&times;</button>    
+        <button class="close-modal" id="close-modal"><a href="./index.html">×</a></button>    
+        <div class="shipping-form-container"> 
         <section class="shipping-box">
             <div class="box-title">Dane do wysyłki</div>
+           
+                <form class="shipping-form">
 
-        <form class="shipping-form">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="first-name">Imię</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
 
-            <div class="form-row">
-                <div class="form-field">
-                    <label for="first-name">Imię</label>
-                    <input type="text" id="first-name" name="first-name" required>
-                </div>
+                        <div class="form-field">
+                            <label for="last-name">Nazwisko</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
 
-                <div class="form-field">
-                    <label for="last-name">Nazwisko</label>
-                    <input type="text" id="last-name" name="last-name" required>
-                </div>
-            </div>
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <label for="address">Adres</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                    </div>
 
-            <div class="form-row">
-                <div class="form-field full">
-                    <label for="address">Adres</label>
-                    <input type="text" id="address" name="address" required>
-                </div>
-            </div>
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <label for="city">Miasto</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
 
-            <div class="form-row">
-                <div class="form-field full">
-                    <label for="city">Miasto</label>
-                    <input type="text" id="city" name="city" required>
-                </div>
-            </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="postal">Kod pocztowy</label>
+                            <input type="text" id="postal" name="postal" required>
+                        </div>
 
-            <div class="form-row">
-                <div class="form-field">
-                    <label for="postal">Kod pocztowy</label>
-                    <input type="text" id="postal" name="postal" required>
-                </div>
+                        <div class="form-field">
+                            <label for="phone">Telefon kontaktowy</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
 
-                <div class="form-field">
-                    <label for="phone">Telefon kontaktowy</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-            </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="newsletter">newsletter</label>
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                        </div>
+                    </div>
 
-            <div class="form-row">
-                <div class="form-field">
-                    <label for="newsletter">newsletter</label>
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-field">
-                    <label for="email">e-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-            </div>
-        </form>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="email">e-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Zatwierdź</button>
+                </form>
+        </div>
     
     </section>
     
 
         <!-- KOSZYK -->
-        <section class="cart-box">
-            <h2 class="box-title">Koszyk</h2>
+        <div class="cart-box-container"> 
+                <section class="cart-box">
+                    <h2 class="box-title">Koszyk</h2>
 
-            <div class="cart-item">
-                <div class="item-thumb"></div> 
-                <div class="item-name">Ultimate Black Hoodie</div>
-                <div class="item-size">S</div>
-                <div class="item-price">450 PLN</div>
+                    <div class="cart-item">
+                        <div class="item-thumb"></div> 
+                        <div class="item-name">Ultimate Black Hoodie</div>
+                        
+                        <div class="item-size">S</div>
+                        <div class="item-price">450 PLN</div>
+                    </div>
+                
+                <!-- PODSUMOWANIE -->
+                    <section class="summary-box">
+                        <div class="summary-row">
+                        <span>Razem:</span>
+                        <span class="summary-price">450 PLN</span>
+                    
+                        </div>
+                        <hr>
+                        <button class="payment-btn">Payment</button>
+                </section>
             </div>
-
-        <!-- PODSUMOWANIE -->
-            <section class="summary-box">
-                <div class="summary-row">
-                <span>Razem:</span>
-                <span class="summary-price">450 PLN</span>
-            
-                </div>
-                <hr>
-                <button class="payment-btn">Payment</button>
-    </div>
+        </div>
 </div>
         
 <div class="wrapper">   
@@ -122,8 +130,9 @@
 <!-- SPACE UNDER HEADER -->
 <div class="title-containter">
     <div class="title"> 
-        <h1>  Ultimate Black Hoodie </h1>  
+        <h1>  Ultimate Black Hoodie |</h1>  
         <div line="0,3" max-width="800"></div>
+        <h4>1 item – 1 transfer</h4>
     </div>
    
 </div>
@@ -205,11 +214,11 @@
   <div class="product-description">
     
   <ul class="p-inline-list--stretch">
-    <li class="p-inline-list__item">Prać w 40 °C</li>
-    <li class="p-inline-list__item">Prasować max. w 110 stopniach</li>
-    <li class="p-inline-list__item">Nie wybielać i nie chlorować</li>
+    <li class="p-list__item is-ticked">Prać w 40 °C</li>
+    <li class="p-list__item is-ticked">Prasować max. w 110 stopniach</li>
+    <li class="p-list__item is-crossed">Nie wybielać i nie chlorować</li>
     <li class="p-list__item is-crossed u-text--muted">Nie prać chemicznie</li>
-    <li class="p-list__item is-ticked">Nie suszyć w suszarce bębnowej</li>
+    <li class="p-list__item is-crossed">Nie suszyć w suszarce bębnowej</li>
     </ul>
 </div>
 
@@ -270,7 +279,7 @@
    
 <footer id="basket-footer">
       
-    <p>ⓡ 2026 design powered by Visual Design Studio | S_JΛ</p>
+    <p>ⓡ 2026 by Visual Design Studio | S_JΛ</p>
         
 </footer> 
 
@@ -342,6 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('modal-backdrop').classList.add('active');
   });
 </script>
+
 
 <script>
 // Collapsible functionality

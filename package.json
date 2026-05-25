@@ -1,11 +1,12 @@
 {
   "dependencies": {
+    "bootstrap": "^5.2.1",
     "vanilla-framework": "^4.51.0"
   },
-
-
-"scripts": {
-  "build": "sass scss/styles.scss dist/styles.css --style=compressed",
-  "watch": "sass --watch scss/styles.scss dist/styles.css"
-}
+  "scripts": {
+    "build": "sass scss/styles.scss dist/styles.css --style=compressed",
+    "watch": "sass --watch scss/styles.scss dist/styles.css",
+    "start": "parcel serve src/index.html --public-url / --dist-dir dist",
+     "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

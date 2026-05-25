@@ -102,11 +102,23 @@ md-outlined-button {
     background-color: white;
     width: 98vw;
     max-width: 900px;
-    margin: 30px auto;
-    max-height: calc(100vh - 80px);
+    margin: 10px auto;
+    height: 100%;
+    /*max-height: calc(100vh - 80px);*/
     overflow-y: auto;
     z-index: 999;
 }
+
+.close-modal {
+    margin-top: 30px;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* FORMULARZ */
 /* --- SHIPPING BOX --- */
 
@@ -201,8 +213,8 @@ md-outlined-button {
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
-    width: 100px;
-    height: 100px;
+    width: 25px;
+    height: 25px;
 }
 .newsletter-checkbox {
     
@@ -214,6 +226,14 @@ md-outlined-button {
 }
 
 /* KOSZYK */
+.cart-box-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
 .cart-box {
     width: 100%;
     max-width: 600px;
@@ -339,12 +359,20 @@ md-outlined-button {
     margin: 20px auto;
 }   
 button {
+    margin: 20px auto;
+    display: block;
     height: 45px;
-    width: 100%;
+    width: 150px;
     font-size: 12pt;
     font-weight: 700;
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(255, 255, 255);
+    border-color: black;
+    border-top: none;
+    border-left: none;
+    border-width: 3.5px;
+    
 }
+
 
 input {
     height: 80px;
