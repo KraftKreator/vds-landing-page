@@ -362,7 +362,7 @@ font-size: 18pt;
 
 /* HEADER */
 #logotype {
-    position: absolute;
+    position: relative;
     height: 40px;
     margin: 10px 20px 30px 10px;
     justify-content: center;
