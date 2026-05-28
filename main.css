@@ -75,9 +75,19 @@ md-outlined-button {
     
 }
 #modal-backdrop {
-    backdrop-filter: blur(4px);    
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+#modal-backdrop.active {
+    display: flex;
 }
 .modal {
     margin-top: 40px;
@@ -91,37 +101,48 @@ md-outlined-button {
     z-index: 1000;
 }
 
-.modal-content{
+.modal-content {
     display: flex;
-    padding-top: 200px;
-    padding-bottom: 35px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 60px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 0px;
     background-color: white;
-    width: 98vw;
+    width: 95vw;
     max-width: 900px;
-    margin: 10px auto;
-    height: 100%;
-    /*max-height: calc(100vh - 80px);*/
+    height: auto;
     overflow-y: auto;
-    z-index: 999;
+    max-height: calc(100vh - 40px);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
 .close-modal {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 12px;
+    right: 12px;
     background: none;
     border: none;
-    font-size: 32px;
+    font-size: 40px;
     cursor: pointer;
-    padding: 0;
+    padding: 8px 12px;
     line-height: 1;
     color: #000;
-    z-index: 1000;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.close-modal:hover {
+    opacity: 0.7;
 }
 
 /* FORMULARZ */
@@ -130,15 +151,14 @@ md-outlined-button {
 
 
 .shipping-box {
-    margin-top: 70px;
-    min-height: 550px;
-    width: 80vw;
-    max-width: 900px;
+    margin-top: 0;
+    min-height: auto;
+    width: 100%;
     gap: 20px;
-    background: rgb(255, 255, 255);
-    padding: 50px;
-    border-radius: 10px;
-    margin: 20px auto 10px auto;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
     z-index: 999;
 }
 
@@ -165,26 +185,26 @@ md-outlined-button {
 .form-row {
     min-height: 12px;
     display: flex;
-    gap: 7px;
-    margin: 0px;
-    
-    height: 100%;
+    gap: 12px;
+    margin: 0;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 /* Pola */
 .form-field {
     border-left: #000000 4px;
     margin: 10px;
-    max-height: 30px;
+    max-height: 60px;
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 200px;
 }
 
 .form-field.full {
     flex: 100%;
-    min-height: 10px;
+    min-width: auto;
 }
 
 /* Etykiety */
@@ -214,12 +234,27 @@ md-outlined-button {
 }
 
 #newsletter {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.newsletter-field {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 12px !important;
+    max-height: none !important;
+    margin: 20px 10px !important;
+    border-left: none !important;
+}
+
+.newsletter-field label {
+    margin: 0 !important;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
 }
 .newsletter-checkbox {
     
@@ -236,7 +271,8 @@ md-outlined-button {
     text-align: center;
     flex-direction: column;
     gap: 20px;
-
+    width: 100%;
+    margin-top: 30px;
 }
 
 .cart-box {
@@ -338,9 +374,46 @@ md-outlined-button {
 
 
 /* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 768px) {
+    .modal-content {
+        padding-right: 50px;
+        padding-left: 15px;
+    }
+    
+    .close-modal {
+        top: 8px;
+        right: 8px;
+        font-size: 36px;
+        padding: 6px 10px;
+    }
+}
+
 @media (max-width: 480px) {
     .form-row {
         flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-field {
+        flex: 100%;
+        min-width: auto;
+    }
+    
+    .modal-content {
+        padding-top: 16px;
+        padding-right: 45px;
+        padding-left: 12px;
+        padding-bottom: 20px;
+        border-radius: 4px;
+    }
+    
+    .close-modal {
+        top: 4px;
+        right: 4px;
+        font-size: 32px;
+        padding: 4px 8px;
+        min-width: 44px;
+        min-height: 44px;
     }
 }
 

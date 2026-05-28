@@ -25,8 +25,10 @@
 
    <!-- FORMULARZ DANYCH -->
     <div class="modal-content">
-        <button class="close-modal" id="close-modal"><a href="./index.html">×</a></button>    
-        <div class="shipping-form-container"> 
+        <button class="close-modal" id="close-modal" aria-label="Close modal">
+            <span>×</span>
+        </button>    
+        <div class="shipping-form-container">
         <section class="shipping-box">
             <div class="box-title">Dane do wysyłki</div>
            
@@ -71,9 +73,9 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="form-field">
-                            <label for="newsletter">newsletter</label>
+                        <div class="form-field newsletter-field">
                             <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Chcę otrzymywać newsletter</label>
                         </div>
                     </div>
 
@@ -350,6 +352,27 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('purchase clicked, selected size:', selectedSize);
     document.getElementById('modal-backdrop').classList.add('active');
   });
+
+  // Close modal button handler
+  const closeModalBtn = document.getElementById('close-modal');
+  const modalBackdrop = document.getElementById('modal-backdrop');
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      modalBackdrop.classList.remove('active');
+    });
+  }
+
+  // Close modal when clicking on backdrop (outside modal content)
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+      }
+    });
+  }
+
 </script>
 
 
