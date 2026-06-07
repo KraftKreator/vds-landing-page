@@ -13,8 +13,14 @@ body {
     background-size: cover;
     justify-content: center;
 }
+@media (max-width: 768px) {
+    body {
+        background: url(images/background.png) no-repeat center center fixed;
+        background-size: cover;
+    }
+}
 
-/* Wrapper jako główny kontener */
+/* Wrapper główny kontener */
 .wrapper {
     height: 100%;
     width:100%;
