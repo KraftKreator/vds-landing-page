@@ -1,6 +1,6 @@
 .title-container {
     justify-content: center;
-    display: flex;
+    display: inline-block;
     width: 100%;
     max-width: 800px;
     padding: 60px;
@@ -9,11 +9,22 @@
 }
 
 .title {
+    display: flex;
+    width: 100%;
     justify-content: center;
     text-align: center:
 
 }
-
+.subtitle {
+    position: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}   
 .product-image {
     width: 100%;  
     transition: opacity .3s ease;
@@ -195,6 +206,10 @@ color: #333;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 40px -35px 30px 0px rgba(0,0,0,0.3);
+}
+.purchase-btn:hover {
+    background-color: #0056b3;
+    color: rgb(255, 255, 255);
 }
 
 .modal-backdrop {
