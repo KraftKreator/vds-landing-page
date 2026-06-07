@@ -9,12 +9,19 @@ body {
     margin: 0; 
     font-family: 'Archivo', sans-serif;
     background-color: rgb(255, 255, 255);
-   background: url(images/vdswebbackground-01.png) no-repeat center center fixed;/* tlo */
+   background: url(images/vdswebbackground-01.png) no-repeat center center fixed;
     background-size: cover;
     justify-content: center;
 }
 
-/* Wrapper jako główny kontener */
+@media (max-width: 768px) {
+    body {
+        background: url(images/background.png) no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
+/* wrapper główny kontener */
 .wrapper {
     height: 100%;
     width:100%;
@@ -24,17 +31,12 @@ body {
 }
 header {
     display: flex;
-    
     position: fixed;
-    
     justify-content: center;
-    
     width: 100%;
     height: 72px;
      backdrop-filter: blur(80px); 
-  background-color: rgb(255, 255, 255); /* półprzezroczyste tło */
-    
-    
+    background-color: rgb(255, 255, 255);
     text-align: right;
     /* mix-blend-mode: difference;  dynamiczny efekt odwrócenia względem tła */     
     z-index: 998;
@@ -714,8 +716,7 @@ border-radius: 40px;
 .title {
     display: flex;
     justify-content: center;
-   
-    width: 375px;
+    width: 100%;
     text-align: right;
     margin: 5px 20px 20px 30px;
     border-bottom: 0.5px solid rgb(187, 186, 195);   
@@ -957,9 +958,6 @@ span {
 .divider {
     line: 0,8;
     max-width: 600px; 
-    
-    justify-content: center;
-
 }
 
 .payment-status-success {

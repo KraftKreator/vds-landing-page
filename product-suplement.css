@@ -1,11 +1,10 @@
 .title-container {
-    color: red; 
+    
     text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
     max-width: 800px;
-     max-width: 800px;
     padding: 60px;
     margin: 60px;        
     text-align: center; 
