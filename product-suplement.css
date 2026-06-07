@@ -182,21 +182,20 @@ color: #333;
     background-color: #0088ff;;
 }
 .purchase-wrapper {
-    min-width: 350px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 /*below product cards, button move client to payment & delivery form*/
 .purchase-btn {
-
     color: rgb(255, 255, 255);
-    margin: 50px;
-    position: right;
+    margin: 50px auto;
     max-width: 720px;
-
-    width: 100%;
+    width: 90%;
     height: 70px;
     padding: 14px;
     background: #0088ff;
@@ -206,6 +205,7 @@ color: #333;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 40px -35px 30px 0px rgba(0,0,0,0.3);
+    display: block;
 }
 .purchase-btn:hover {
     background-color: #0056b3;

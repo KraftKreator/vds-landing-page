@@ -23,10 +23,12 @@ body {
 /* Wrapper główny kontener */
 .wrapper {
     height: 100%;
-    width:100%;
-    display: inline-block;
-    
-    
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 header {
     display: flex;
