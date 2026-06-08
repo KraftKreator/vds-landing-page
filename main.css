@@ -719,12 +719,22 @@ border-radius: 40px;
     min-width: 100px;
 }
 
+.title-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 20px 20px;
+}
 
 .title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
-    text-align: right;
+    text-align: center;
     margin: 5px 20px 20px 30px;
     border-bottom: 0.5px solid rgb(187, 186, 195);   
     outline-width: auto;
@@ -796,12 +806,13 @@ section a {
 
 
 .content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-  background-color: #f1f1f1;
-  padding: 0;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    background-color: #f1f1f1;
+    padding: 0;
+    margin: 0;
 }
 
 .collapsible {
@@ -809,6 +820,8 @@ section a {
     mix-blend-mode: difference;
   color: rgb(255, 255, 255);
   cursor: pointer;
+    display: block;
+    margin: 0;
   padding: 32px;
   height: 80px;
   width: 100%;
@@ -850,7 +863,7 @@ section a {
   overflow: hidden;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
   background-color: #f1f1f1;
-  padding: 0;
+    margin: 0;
 }
 
 

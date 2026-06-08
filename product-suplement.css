@@ -183,11 +183,14 @@ color: #333;
 }
 .purchase-wrapper {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 0 12px;
 }
 
 /*below product cards, button move client to payment & delivery form*/
@@ -195,11 +198,10 @@ color: #333;
     color: rgb(255, 255, 255);
     margin: 50px auto;
     max-width: 720px;
-    width: 90%;
+    width: min(90%, 720px);
     height: 70px;
     padding: 14px;
     background: #0088ff;
-    color: white;
     border: none;
     border-radius: 60px;
     font-size: 16px;
@@ -210,6 +212,18 @@ color: #333;
 .purchase-btn:hover {
     background-color: #0056b3;
     color: rgb(255, 255, 255);
+}
+
+@media (max-width: 600px) {
+    .purchase-wrapper {
+        padding: 0 10px;
+    }
+
+    .purchase-btn {
+        width: 100%;
+        max-width: 100%;
+        margin: 30px auto;
+    }
 }
 
 .modal-backdrop {
