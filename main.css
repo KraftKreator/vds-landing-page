@@ -358,6 +358,7 @@ md-outlined-button {
 }
 /*payment trigger below shipping form*/
 .payment-btn {
+    display: block;
     margin-top: 15px;
     margin-left: 160px;
     position: right;
@@ -805,15 +806,6 @@ section a {
 
 
 
-.content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    background-color: #f1f1f1;
-    padding: 0;
-    margin: 0;
-}
 
 .collapsible {
   background-color: rgb(17, 17, 17);
@@ -858,7 +850,7 @@ section a {
 
 
 .content {
-  padding: 0 18px;
+  padding: 0 0 0px 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
