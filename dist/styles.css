@@ -1792,7 +1792,7 @@ button:disabled:active, button:disabled[aria-pressed=true], button:disabled[aria
 .p-tabs__link:last-child, .p-side-navigation__toggle:last-child,
 .p-side-navigation__toggle--in-drawer:last-child, .p-pagination__link--previous:last-child,
 .p-pagination__link--next:last-child, .p-pagination__link:last-child, .p-button--base:last-child, .p-button--negative:last-child, .p-button--positive:last-child, .p-button--brand:last-child, .p-button:last-child, .p-article-pagination__link--next:last-child, .p-article-pagination__link--previous:last-child, button:last-child {
-  margin-right: 0;
+ /* margin-right: 0; */
 }
 .is-dense.p-tabs__link, .is-dense.p-side-navigation__toggle,
 .is-dense.p-side-navigation__toggle--in-drawer, .is-dense.p-pagination__link--previous,
