@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/dist/styles.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="product-suplement.css">
+    
     <script type="module" src="https://esm.run/@material/web/all"></script>
 </head>
 
@@ -20,7 +21,10 @@
   gtag('config', 'G-QLQBENDFCN');
 </script>
 
+
 <body>
+    
+
 <div class="modal-backdrop" id="modal-backdrop">
 
    <!-- FORMULARZ DANYCH -->
@@ -138,6 +142,9 @@
     </div>
     <div class="subtitle"><h4>wybierz swój rozmiar | select your size</h4></div>
 </div>
+<div class="status"> </div>
+
+
 
 <!-- PRODUCT SECTION -->
 <div class="product-containter">
@@ -410,6 +417,25 @@ collapsibles.forEach(collapsible => {
     }
   });
 });</script>
+    <script>
+ //window.scrollY – ile scrollowane było
+ //document.documqentElement.scrollHeight – całkowita wysokość strony
+ //window.innerHeight – wysokość okna przeglądarki
+
+ const bar = document.querySelector('.status');
+ const statusBar = () => {
+    currentScroll = Math.round(window.scrollY / 
+    (document.documentElement.offsetHeight - 
+    window.innerHeight) * 100);
+    bar.style.width = currentScroll + "%";
+
+    //console.log(currentScroll);
+
+
+ }
+ window.addEventListener('scroll', statusBar);
+
+    </script>
 
 
 <script src="script.js"></script> 

@@ -48,6 +48,15 @@ header {
     z-index: 998;
     
 }
+.status {
+        height: 10px;
+        width: 0%;
+        background-color: rgb(17, 0, 255);
+        border-radius: 0px 0px 8px 8px;
+        transition: 1.6s linear;
+        position: fixed;
+        top: 72px; 
+    }
 
 
 
