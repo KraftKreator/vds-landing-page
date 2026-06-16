@@ -49,16 +49,28 @@ header {
     
 }
 .status {
-        height: 10px;
+        height: 1vh;
         width: 0%;
-        background-color: rgb(17, 0, 255);
-        border-radius: 0px 0px 8px 8px;
-        transition: 1.6s linear;
+        background-color: rgba(6, 31, 250, 0.116);
+        backdrop-filter: blur(15px);
+        border-radius: 0px 0px 25px 0px;
+        transition: 1.9s linear;
         position: fixed;
         top: 72px; 
+        z-index: 999;
     }
 
-
+.statusbar-modal {
+        height: 1vh;
+        width: 0%;
+        background-color: rgba(6, 31, 250, 0.116);
+        backdrop-filter: blur(15px);
+        border-radius: 0px 0px 25px 0px;
+        transition: 1.9s linear;
+        position: fixed;
+        top: 72px; 
+        z-index: 999;
+    }
 
 
 md-outlined-button {

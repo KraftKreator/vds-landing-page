@@ -29,6 +29,7 @@
 
    <!-- FORMULARZ DANYCH -->
     <div class="modal-content">
+        <div class="statusbar-modal"> </div>
         <button class="close-modal" id="close-modal" aria-label="Close modal">
             <span>×</span>
         </button>    
@@ -153,15 +154,15 @@
         <img src="./images/ultimate-black-hoodie-W-front.png" 
         alt="Product Image"
         class="product-image main-product-image"
-        data-sex="W">
+        data-sex="W" loading="lazy">
         
         <div class="product-thumbs">
-         <img src="./images/ultimate-black-hoodie-W-back-01.png" data-img="./images/ultimate-black-hoodie-W-back-01.png">
-         <img src="./images/ultimate-black-hoodie-W-front-packshot-01.png" data-img="./images/ultimate-black-hoodie-W-front-packshot-01.png">
-         <img src="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" data-img="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg">
-         <img src="./images/ultimate-black-hoodie-M-back-packshot.png" data-img="./images/ultimate-black-hoodie-M-back-packshot.png">
-         <img src="./images/ultimate-black-hoodie-detail.png" data-img="./images/ultimate-black-hoodie-detail.png">
-         <img src="./images/ultimate-black-hoodie-W-front.png" data-img="./images/ultimate-black-hoodie-W-front.png">
+         <img src="./images/ultimate-black-hoodie-W-back-01.png" data-img="./images/ultimate-black-hoodie-W-back-01.png" loading="lazy">
+         <img src="./images/ultimate-black-hoodie-W-front-packshot-01.png" data-img="./images/ultimate-black-hoodie-W-front-packshot-01.png" loading="lazy">
+         <img src="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" data-img="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" loading="lazy">
+         <img src="./images/ultimate-black-hoodie-M-back-packshot.png" data-img="./images/ultimate-black-hoodie-M-back-packshot.png" loading="lazy">
+         <img src="./images/ultimate-black-hoodie-detail.png" data-img="./images/ultimate-black-hoodie-detail.png" loading="lazy">
+         <img src="./images/ultimate-black-hoodie-W-front.png" data-img="./images/ultimate-black-hoodie-W-front.png" loading="lazy">
         </div>
     
         <div class="product-details">
@@ -181,12 +182,12 @@
         alt="Product Image"
         class="product-image main-product-image">
         <div class="product-thumbs">
-            <img src="./images/ultimate-black-hoodie-M-back-01.png" data-img="./images/ultimate-black-hoodie-M-back-01.png ">
-            <img src="./images/ultimate-black-hoodie-M-front-packshot.png" data-img="./images/ultimate-black-hoodie-M-front-packshot.png">
-            <img src="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" data-img="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg">
-            <img src="./images/ultimate-black-hoodie-M-back-packshot.png" data-img="./images/ultimate-black-hoodie-M-back-packshot.png">
-            <img src="./images/ultimate-black-hoodie-detail.png" data-img="./images/ultimate-black-hoodie-detail.png">
-            <img src="./images/ultimate-black-hoodie-M-front_1-01.png" data-img="./images/ultimate-black-hoodie-M-front_1-01.png">
+            <img src="./images/ultimate-black-hoodie-M-back-01.png" data-img="./images/ultimate-black-hoodie-M-back-01.png" loading="lazy">
+            <img src="./images/ultimate-black-hoodie-M-front-packshot.png" data-img="./images/ultimate-black-hoodie-M-front-packshot.png" loading="lazy">
+            <img src="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" data-img="./images/VDS_ensemble_kangoor_hoodie_detail_1.jpg" loading="lazy">
+            <img src="./images/ultimate-black-hoodie-M-back-packshot.png" data-img="./images/ultimate-black-hoodie-M-back-packshot.png" loading="lazy">
+            <img src="./images/ultimate-black-hoodie-detail.png" data-img="./images/ultimate-black-hoodie-detail.png" loading="lazy">
+            <img src="./images/ultimate-black-hoodie-M-front_1-01.png" data-img="./images/ultimate-black-hoodie-M-front_1-01.png" loading="lazy">
         </div>
 
         <div class="product-details">
@@ -218,7 +219,7 @@
    
 
 <button class="collapsible">Care</button>
-<div class="content"><img class="product-image" src="./images/Assetcoel.png" height=100>
+<div class="content"><img class="product-image" src="./images/Assetcoel.png" height=100 loading="lazy">
   <!--PRANIA-->
   <div class="product-description">
     
@@ -234,11 +235,11 @@
 
 </div>
 <button class="collapsible">Size Guide Woman</button>
-<div class="content"><img class="product-image"src="./images/w-sizeguide-vdsensemble.png" height=150>
+<div class="content"><img class="product-image"src="./images/w-sizeguide-vdsensemble.png" height=150 loading="lazy">
   <p>*Zakres tolerancji ~ 1,5 cm</p>
 </div>
 <button class="collapsible">Size Guide Man</button>
-<div class="content"><img class="product-image" src="./images/m-sizeguide-vdsensemble.png" height=150>
+<div class="content"><img class="product-image" src="./images/m-sizeguide-vdsensemble.png" height=150 loading="lazy">
   <p>*Zakres tolerancji ~ 1,5 cm</p>
 </div>
 
@@ -417,6 +418,8 @@ collapsibles.forEach(collapsible => {
     }
   });
 });</script>
+    
+
     <script>
  //window.scrollY – ile scrollowane było
  //document.documqentElement.scrollHeight – całkowita wysokość strony
