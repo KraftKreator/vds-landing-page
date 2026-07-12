@@ -12,6 +12,20 @@
       color: #222;
       line-height: 1.6;
     }
+    .mega-overlap {
+    font-size: 15vh;
+    color: white;
+    background-color: rgba(30, 10, 255, 0.206);
+    pointer-events: none;
+    content-align: center;
+    width: 95%;
+    height: 100%;
+    border:#0088ff 20px;
+    filter: blur(30px);
+    position: relative;
+    z-index: 9999; /* always on top */
+    
+}
     .page-wrapper {
       margin: 0 auto;
       display: flex;
@@ -84,6 +98,7 @@
     }
   </style>
 </head>
+<div class="mega-overlap">
 <body>
   <div class="page-wrapper">
     <header>
@@ -106,4 +121,5 @@
     </footer>
   </div>
 </body>
+</div>
 </html>
