@@ -13,6 +13,32 @@ body {
     background-size: cover;
     justify-content: center;
 }
+
+.mega-overlap {
+    font-size: 15vh;
+    color: white;
+    background-color: rgba(30, 10, 255, 0.206);
+    pointer-events: none;
+    content-align: center;
+    width: 95%;
+    height: 100%;
+    border:#0088ff 20px;
+    filter: blur(30px);
+    position: relative;
+    z-index: 9999; /* always on top */
+    
+}
+
+.devworks {
+    position: flex;
+    align-items: center;
+    content-align: center;
+    bottom: 0;
+    right: 0;
+    z-index: 9999; /* always on top */
+    padding: 10px;
+}
+
 @media (max-width: 768px) {
     body {
         background: url(images/background.png) no-repeat center center fixed;
