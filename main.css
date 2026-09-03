@@ -14,7 +14,9 @@ body {
     justify-content: center;
 }
 
+/*
 .mega-overlap {
+    
     font-size: 15vh;
     color: white;
     background-color: rgba(30, 10, 255, 0.206);
@@ -23,13 +25,15 @@ body {
     width: 95%;
     height: 100%;
     border:#0088ff 20px;
-    filter: blur(30px);
+    /* filter: blur(30px); 
     position: relative;
     z-index: 9999; /* always on top */
     
 }
+*/
 
 .devworks {
+    
     position: flex;
     align-items: center;
     content-align: center;
@@ -392,6 +396,16 @@ md-outlined-button {
     background-color: white;
     z-index: 998;
 }
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
 .summary-row {
     display: flex;
     justify-content: space-between;
@@ -767,6 +781,7 @@ border-radius: 40px;
     min-width: 100px;
 }
 
+
 .title-container {
     display: flex;
     text-align: center;
@@ -776,6 +791,7 @@ border-radius: 40px;
     width: 80%;
     padding: 20px 20px;
 }
+
 
 .title {
     display: flex;
@@ -788,9 +804,14 @@ border-radius: 40px;
     outline-width: auto;
     
 }
+
 .title h3 {
     text-align: center;
-    font-size: 18pt;
+    font-size: 28pt;
+    font-weight: 700;
+    color: rgb(236, 98, 17);
+    letter-spacing: -0.5px;
+    margin: 0;
 }
 
 
